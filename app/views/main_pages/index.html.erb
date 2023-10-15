@@ -1,0 +1,11 @@
+<h1> Main page </h1>
+
+<%= link_to "sign up", new_user_path %><br>
+<%= link_to "login", login_path %>
+
+<% if current_user %>
+    <%= link_to "logout", logout_path, method: :delete %>
+ <% else %>
+    <%= link_to "sign up", new_user_path %><br>
+    <%= link_to "login", login_path %>
+<% end %>
